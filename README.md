@@ -1,4 +1,4 @@
-># Real-Time Lane Detection using OpenCV
+># Realtime-Lane-detection-and-Object-detection
 
 # Requirements:
 
