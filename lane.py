@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+import argparse
 
 def process(image):
     
@@ -20,7 +21,7 @@ def process(image):
     min_line_len = 20
     max_line_gap = 20   
 
-    lines = cv2.HoughLinesP(cropped_image, rho, theta, threshold, np.array([]),      minLineLength=min_line_len, maxLineGap=max_line_gap)
+    lines = cv2.HoughLinesP(cropped_image, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap)
     line_image = draw_the_lines (image,lines)
     return line_image
 
@@ -54,31 +55,34 @@ def draw_the_lines(img, lines):
     return img
 	
 
+# Parse command line arguments
+parser = argparse.ArgumentParser(description='Process video and detect lines.')
+parser.add_argument('--source', type=str, required=True, help='Path to input video file')
+parser.add_argument('--view-img', action='store_true', help='Display processed frames')
 
-    
-   
-cap = cv2.VideoCapture('./video.m4v')
+args = parser.parse_args()
+
+cap = cv2.VideoCapture(args.source)
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
-   
-  
 size = (frame_width, frame_height)
-result= cv2.VideoWriter('./lines.avi', 
-                         cv2.VideoWriter_fourcc(*'MPEG'),
-                         20, size)
 
+result = cv2.VideoWriter('lines.avi', cv2.VideoWriter_fourcc(*'XVID'), 20, size)
 
 while cap.isOpened():
     ret, frame = cap.read()
-    if(frame is not None):
-      frame = process(frame)
-      result.write(frame)
-    
-      if cv2.waitKey(1) & 0xFF == ord('q'):
-          break
+    if frame is not None:
+        processed_frame = process(frame)
+        result.write(processed_frame)
+
+        if args.view_img:
+            cv2.imshow('Processed Frame', processed_frame)  # Display processed frame
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
     else:
-      break
+        break
 
 cap.release()
+result.release()
 cv2.destroyAllWindows()
-
