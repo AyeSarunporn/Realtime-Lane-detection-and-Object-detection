@@ -12,27 +12,15 @@
 
 1. Clone this repository
 2. Get a New Terminal from the current location
-3. Type "python3 lane.py & python3 yolov5/detect.py --source ./lines.avi --view-img"
+3. Type "python3 lane.py & python3 yolov5/detect.py --source v2.mp4 --view-img"
 4. You can include any video as your wish by modifying the lane.py file. (here video.m4v is the selected video)
-
 
 # Screenshots:
 
-![Screenshot 1](results/ss1.png)
-![Screenshot 2](results/ss2.png)
-![Screenshot 3](results/ss3.png)
-![Screenshot 4](results/ss4.png)
-![Screenshot 5](results/ss5.png)
-![Screenshot 6](results/ss6.png)
-
-
-# Screen Record of Detection:
-
-Link: https://www.youtube.com/watch?v=GI6RYhoI1Bo
-(Tested on Ubuntu 21.04)
+![Screenshot 1](results/img_test.png)
 
 # Reference:
-
-https://github.com/ultralytics/yolov5
+GitHub: https://github.com/Nirmal-C/Real-Time-Lane-Detection
+Link: https://www.youtube.com/watch?v=GI6RYhoI1Bo
 
 
