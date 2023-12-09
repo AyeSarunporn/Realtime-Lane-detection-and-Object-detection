@@ -6,16 +6,15 @@
 * PyTorch
 * OpenCV Library for python package
 * Recommended CUDA with CUDNN (For Nvidia GPU Processing)
-* Yolo Version 5 Repository with yolov5s.pt model (required files are  included in this repository itself) 
+* Yolo Version 5 Repository with yolov5s.pt model (required files are included in this repository itself) 
 
-# To Run (Tested on Ubuntu):
+# To Run (Tested on Anacoda3):
 
 1. Clone this repository
 2. Get a New Terminal from the current location
 3. Type "python3 lane.py & python3 yolov5/detect.py --source v2.mp4 --view-img"
-4. You can include any video as your wish by modifying the lane.py file. (here video.m4v is the selected video)
 
-# Screenshots:
+# Result:
 
 ![Screenshot 1](results/img_test.png)
 
