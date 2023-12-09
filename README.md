@@ -19,7 +19,7 @@
 ![Screenshot 1](results/img_test.png)
 
 # Reference:
-https://github.com/Nirmal-C/Real-Time-Lane-Detection
-
+1.https://github.com/Nirmal-C/Real-Time-Lane-Detection
+2.https://github.com/nicedaddy/Yolov5_DeepSort_Pytorch_lane_detection
 
 
