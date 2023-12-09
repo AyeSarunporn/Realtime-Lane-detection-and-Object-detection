@@ -20,7 +20,7 @@
 ![Screenshot 1](results/img_test.png)
 
 # Reference:
-GitHub: https://github.com/Nirmal-C/Real-Time-Lane-Detection
-Link: https://www.youtube.com/watch?v=GI6RYhoI1Bo
+https://github.com/Nirmal-C/Real-Time-Lane-Detection
+
 
 
