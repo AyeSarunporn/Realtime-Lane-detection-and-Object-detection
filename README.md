@@ -12,7 +12,8 @@
 
 1. Clone this repository
 2. Get a New Terminal from the current location
-3. Type "python3 lane.py & python3 yolov5/detect.py --source v2.mp4 --view-img"
+3. Type "python3 lane.py --source v2.mp4 --view-img"
+4. Type "python3 yolov5/detect.py --source v2.mp4 --view-img"
 
 # Result:
 
